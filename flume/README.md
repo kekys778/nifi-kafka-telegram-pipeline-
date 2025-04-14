@@ -7,7 +7,9 @@ Telegram -> Kafka -> Flume -> S3
 After configuring a flume agent you should run:
 ```
 student@superset:~/flume$ ./bin/flume-ng agent --conf conf/ --conf-file
-/home/kafka/spool/spool.conf --name agent```
+/home/kafka/spool/spool.conf --name agent
+
+```
 to start the agent
 
 
