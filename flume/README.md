@@ -4,6 +4,13 @@ This step requires configuring a new Flume data flow so that messages are sent t
 
 Telegram -> Kafka -> Flume -> S3
 
+After configuring a flume agent you should run:
+```
+student@superset:~/flume$ ./bin/flume-ng agent --conf conf/ --conf-file
+/home/kafka/spool/spool.conf --name agent```
+to start the agent
+
+
 Message data are sent to the archive as files.
 New files should be closed (rolled) if there are more than 20 messages or if 30 minutes have passed. Files should be stored in compressed form.
 
